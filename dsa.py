@@ -58,19 +58,29 @@
             
           
 # selection sorting
-arr =  [12 , 8 , 7 , 3 , 19 , 98 , 20  ]
+# arr =  [12 , 8 , 7 , 3 , 19 , 98 , 20  ]
 
-def selectionSort(arr):
+# def selectionSort(arr):
+#     n = len(arr)
+#     for i in range(0, n):
+#         smallInx = i
+#         for j in range(i+1 , n):
+#             if arr[j] < arr[smallInx]:
+#                 smallInx = j
+#         arr[i], arr[smallInx] = arr[smallInx], arr[i]
+#     return arr
+# print(selectionSort(arr))
+
+
+bubbleSort = [12 , 8 , 7 , 3 , 19 , 98 , 20  ]
+def bubbleSort(arr):
     n = len(arr)
-    for i in range(0, n):
-        smallInx = i
-        for j in range(i+1 , n):
-            if arr[j] < arr[smallInx]:
-                smallInx = j
-        arr[i], arr[smallInx] = arr[smallInx], arr[i]
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
-print(selectionSort(arr))
-
+print(bubbleSort(bubbleSort))
 
 
 
