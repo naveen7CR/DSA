@@ -46,16 +46,32 @@
 #             current = current.next
 
 
-class Node:
-    def __init__(self,Data):
-        self.prev=None
-        self.next=None
-        self.data=Data
-        curnode=self.head
-        while curnode.next!=None:
-            print(curnode.data,end=" ")
-            curnode=curnode.next
+# class Node:
+#     def __init__(self,Data):
+#         self.prev=None
+#         self.next=None
+#         self.data=Data
+#         curnode=self.head
+#         while curnode.next!=None:
+#             print(curnode.data,end=" ")
+#             curnode=curnode.next
             
           
+# selection sorting
+arr =  [12 , 8 , 7 , 3 , 19 , 98 , 20  ]
+
+def selectionSort(arr):
+    n = len(arr)
+    for i in range(0, n):
+        smallInx = i
+        for j in range(i+1 , n):
+            if arr[j] < arr[smallInx]:
+                smallInx = j
+        arr[i], arr[smallInx] = arr[smallInx], arr[i]
+    return arr
+print(selectionSort(arr))
+
+
+
 
 
